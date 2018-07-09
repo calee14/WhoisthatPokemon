@@ -9,10 +9,11 @@
 
 import UIKit
 
-class ChoosePokemonTableViewController: UITableViewController {
+class ChoosePokemonTableViewController: UITableViewController{
 
     var pokemons: [Pokemon] = []
     var selectedPokemon: Pokemon?
+    var delegate: PokeDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +46,7 @@ class ChoosePokemonTableViewController: UITableViewController {
         
         
         // TODO:  You will want to inform your delegate HERE that a pokemon was selected
-        
+        delegate?.didSelectPokemon(pokemon: selectedPokemon)
         
         self.navigationController?.popViewController(animated: true)
     }

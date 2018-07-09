@@ -66,8 +66,9 @@ class PokemonDisplayViewController: UIViewController {
         
         // TODO: Make sure to set the *delegate* on the ChoosePokemonViewController
         
-    self.navigationController?.pushViewController(choosePokemonController, animated: true)
+        choosePokemonController.delegate = self
         
+        self.navigationController?.pushViewController(choosePokemonController, animated: true)
     }
     
     
@@ -97,5 +98,11 @@ class PokemonDisplayViewController: UIViewController {
     
     @IBAction func choosePokemon(_ sender: UIButton) {
         goToChoosePokemonViewController()
+    }
+}
+
+extension PokemonDisplayViewController: PokeDelegate {
+    func didSelectPokemon(pokemon: Pokemon) {
+        self.checkGuessedPokemonAndShowPokemon(selectedPokemon: pokemon)
     }
 }
