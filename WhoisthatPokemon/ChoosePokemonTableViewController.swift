@@ -13,7 +13,7 @@ class ChoosePokemonTableViewController: UITableViewController{
 
     var pokemons: [Pokemon] = []
     var selectedPokemon: Pokemon?
-    var delegate: PokeDelegate?
+    weak var delegate: PokeDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
