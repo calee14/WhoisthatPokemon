@@ -1,2 +1,2 @@
 # WhoisthatPokemon
-This project was built based of [Make Schools repo, WhoisthatPokemon](https://github.com/Product-College-Labs/WhosthatPokemon).
+This project was built based off [Make School's repo, WhoisthatPokemon](https://github.com/Product-College-Labs/WhosthatPokemon).
